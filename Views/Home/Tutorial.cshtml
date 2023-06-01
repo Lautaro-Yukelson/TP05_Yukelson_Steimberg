@@ -1,0 +1,32 @@
+@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div class="tutorial">
+    <div class="text-center">
+        <h1 class="display-4">Tutorial</h1>
+        <p>El tutorial es muy simple en realidad, simplemente vas a tener que prestar atencion a muchas cosas para saber por donde ir.</p>
+        <p>Va a existir una forma de pedir una pista con la tecla <b>P</b> (probalo si queres) por si estas muy perdido y necesitas de una ayuda.</p>
+        <p>Psss... Tip: Prestale atencion al mouse cuando se convierte en la manito, como <span>AQUI</span></p>
+        <button class="btn btn-secondary"><a href="~/Home/Comenzar">A jugar!</a></button>
+
+
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="pista" hidden></button>        
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Pista</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Lo quisiste probar eh? No confiaste
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+             </div>
+        </div>
+    </div>
+</div>

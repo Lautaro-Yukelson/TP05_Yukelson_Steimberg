@@ -20,3 +20,24 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+
+/************************************************************************************************/
+
+a, a:hover{
+  text-decoration: none;
+  color: #fff;
+}
+
+.tutorial{
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tutorial p span{
+  cursor: pointer;
+}

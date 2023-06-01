@@ -1,4 +1,7 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
-
-// Write your JavaScript code.
+﻿document.addEventListener('keydown', (event) => {
+    var codigo = event.which || event.keyCode;
+    /*console.log(String.fromCharCode(codigo));*/
+    if (String.fromCharCode(codigo) == "P"){
+        document.getElementById('pista').click();
+    }
+  });
