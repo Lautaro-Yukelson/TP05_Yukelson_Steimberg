@@ -9,6 +9,7 @@ namespace TP05_Yukelson_Steimberg.Models
     public static class Escape{
         private static string[] incognitasSalas { get; set; }
         private static int estadoJuego { get; set; } = 1;
+        public static List<Habitaciones> ListaHabitaciones = new List<Habitaciones>{};
 
         private static void InicializarJuego(){
             incognitasSalas.Append("motosierra"); // Objeto favorito del padre
@@ -20,10 +21,16 @@ namespace TP05_Yukelson_Steimberg.Models
             incognitasSalas.Append("everywhere"); // Donde estan los coleccionables cabezones?
             incognitasSalas.Append("albert-01R"); // Pistola que se desbloquea al terminar el juego.
             incognitasSalas.Append("mia/zoe"); // A quien salvas? Dos finales distintos
+
+            ListaHabitaciones.Add(new Habitaciones("Titulo", "Descripcion", null/*ListaMultimedia*/, "Acertijo", "Pista"));
         }
 
         public static int GetEstadoJuego(){
             return estadoJuego;
+        }
+        
+        public static List<Habitaciones> GetHabitaciones(){
+            return ListaHabitaciones;
         }
 
         public static bool ResolverSala(int Sala, string Incognita){
