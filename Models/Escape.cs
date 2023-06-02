@@ -12,17 +12,21 @@ namespace TP05_Yukelson_Steimberg.Models
         public static List<Habitaciones> ListaHabitaciones = new List<Habitaciones>{};
 
         private static void InicializarJuego(){
-            incognitasSalas.Append("motosierra"); // Objeto favorito del padre
-            incognitasSalas.Append("muñeca"); // Representación de Eveline
+            // Generales
+            incognitasSalas.Append("motosierras"); // Jack Baker y su obsesion con las 
+            incognitasSalas.Append("muñeca"); // Objeto que de cierta forma representa a Eveline
+            incognitasSalas.Append("no se lo come"); // En la comida familiar luego de la primera pelea con mia, la madre se estresa por que ethan...
+
             incognitasSalas.Append("1408"); // Codigo minijuego cumpleaños
             incognitasSalas.Append("loser"); // Contraseña para la valvula --> Minijuego cumpleaños
             incognitasSalas.Append("10:15"); // Hora para poner el reloj para conseguir la llave roja.
-            incognitasSalas.Append("no se lo come"); // La vieja se estresa porque...
             incognitasSalas.Append("everywhere"); // Donde estan los coleccionables cabezones?
             incognitasSalas.Append("albert-01R"); // Pistola que se desbloquea al terminar el juego.
             incognitasSalas.Append("mia/zoe"); // A quien salvas? Dos finales distintos
 
-            ListaHabitaciones.Add(new Habitaciones("Titulo", "Descripcion", null/*ListaMultimedia*/, "Acertijo", "Pista"));
+            ListaHabitaciones.Add(new Habitaciones("Titulo", "Descripcion", new List<string>{"fondo.webp"}, "Acertijo", "Pista"));
+            ListaHabitaciones.Add(new Habitaciones("Titulo", "Descripcion", new List<string>{"fondo.webp"}, "Acertijo", "Pista"));
+            ListaHabitaciones.Add(new Habitaciones("Titulo", "Descripcion", new List<string>{"fondo.webp"}, "Acertijo", "Pista"));
         }
 
         public static int GetEstadoJuego(){
