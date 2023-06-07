@@ -21,6 +21,7 @@ public class HomeController : Controller
     }
 
     public IActionResult Comenzar(){
+        ViewBag.sala = Escape.GetEstadoJuego();
         return View();
     }
 
@@ -29,6 +30,8 @@ public class HomeController : Controller
     }
 
     public IActionResult Habitacion(int sala, string clave){
+        ViewBag.sala = sala;
+        ViewBag.clave = clave;
         return View();
     }
 

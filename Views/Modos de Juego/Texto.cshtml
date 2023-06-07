@@ -1,0 +1,18 @@
+@{
+    ViewData["Title"] = "Sala " + ViewBag.sala;
+    string clase = "sala" + ViewBag.sala;
+}
+
+<div class="@Html.Raw(clase) text-center">
+    <div class="text-center">
+        <h1 class="display-4">Sala @ViewBag.sala</h1>
+    </div>
+    <div class="text-center">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia id odit veniam libero aperiam accusantium debitis beatae, repudiandae, vitae ipsa provident similique odio illo. Corporis sunt libero veritatis quas officiis natus aut et modi praesentium qui, quidem id neque. Reprehenderit exercitationem veniam dicta sapiente sequi error ipsam odio vero fugit repellat voluptatum, nobis, totam aliquam atque tenetur laboriosam ipsum, deserunt esse? Magnam deleniti soluta quisquam. Non numquam recusandae fugit repudiandae quod nobis ullam inventore dignissimos repellendus vitae laborum ex debitis minus voluptatum soluta odio excepturi, eum alias quisquam voluptates tempora aliquam enim at possimus. Quae dolore ipsum rerum porro quasi.</p>
+        <form action="~/Home/Habitacion" method="post">
+            <input type="number" name="sala" value="@Html.Raw(ViewBag.sala)" hidden>
+            <input class="form-control" type="text" name="clave">
+            <button class="btn btn-secondary" type="submit" >Validar</button>
+        </form>
+    </div>
+</div>
