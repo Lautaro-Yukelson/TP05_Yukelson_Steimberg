@@ -1,0 +1,13 @@
+@{
+    ViewData["Title"] = "Sala 1";
+}
+
+<div class="text-center">
+    <h1>Sala 1</h1>
+    <p>Adivinanza</p>
+    <form action="~/Home/Habitacion" method="post" id="resolverForm">
+        <input type="number" name="sala" value="1" hidden>
+        <input class="form-control" type="text" name="clave" placeholder="Respuesta">
+        <button class="btn btn-secondary" type="sumbit">Enviar</button>
+    </form>
+</div>

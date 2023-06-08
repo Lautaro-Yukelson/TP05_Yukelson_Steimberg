@@ -30,8 +30,8 @@ public class HomeController : Controller
     }
 
     public IActionResult Habitacion(int sala, string clave){
-        ViewBag.sala = sala;
-        ViewBag.clave = clave;
+        ViewBag.resuelto = Escape.ResolverSala(sala, clave);
+        ViewBag.siguienteSala = Escape.GetEstadoJuego();
         return View();
     }
 
