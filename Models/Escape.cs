@@ -11,7 +11,7 @@ namespace TP05_Yukelson_Steimberg.Models
         private static int estadoJuego { get; set; } = 0;
     
         private static void InicializarJuego(){
-            incognitasSalas.Add("motosierras"); // Jack Baker y su obsesion con las 
+            incognitasSalas.Add("motosierra"); // A Jack Baker usa la... 
             incognitasSalas.Add("muñeca"); // Objeto que de cierta forma representa a Eveline
             incognitasSalas.Add("no se lo come"); // En la comida familiar luego de la primera pelea con mia, la madre se estresa por que ethan...
             incognitasSalas.Add("1408"); // Codigo minijuego cumpleaños

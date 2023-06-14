@@ -10,5 +10,37 @@ public class SalasController : Controller
         ViewBag.sala = Escape.GetEstadoJuego();
         return View();
     }
+    public IActionResult Sala2(){
+        ViewBag.sala = Escape.GetEstadoJuego();
+        return View();
+    }
+    public IActionResult Sala3(){
+        ViewBag.sala = Escape.GetEstadoJuego();
+        return View();
+    }
+    public IActionResult Sala4(){
+        ViewBag.sala = Escape.GetEstadoJuego();
+        return View();
+    }
+    public IActionResult Sala5(){
+        ViewBag.sala = Escape.GetEstadoJuego();
+        return View();
+    }
+    public IActionResult Sala6(){
+        ViewBag.sala = Escape.GetEstadoJuego();
+        return View();
+    }
+    public IActionResult Sala7(){
+        ViewBag.sala = Escape.GetEstadoJuego();
+        return View();
+    }
+    public IActionResult Sala8(){
+        ViewBag.sala = Escape.GetEstadoJuego();
+        return View();
+    }
+    public IActionResult Sala9(){
+        ViewBag.sala = Escape.GetEstadoJuego();
+        return View();
+    }
 
 }
