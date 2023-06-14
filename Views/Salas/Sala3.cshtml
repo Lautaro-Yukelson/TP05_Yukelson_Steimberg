@@ -1,0 +1,31 @@
+@{
+    ViewData["Title"] = "Sala 3";
+}
+
+<div class="text-center">
+    <h1>Sala 3</h1>
+    <p>Estas por entrar al juego de lucas, ingresa la contraseña de la puerta</p>
+    <form action="~/Home/Habitacion" method="post" id="resolverForm">
+        <input type="number" name="sala" value="3" hidden>
+        <input class="form-control" type="text" name="clave" placeholder="Respuesta">
+        <button class="btn btn-secondary" type="sumbit">Enviar</button>
+    </form>
+
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="pista" hidden></button>        
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Pista</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    En la nota del cuerpo.. <br> *1408*shh..
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

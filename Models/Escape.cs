@@ -12,9 +12,9 @@ namespace TP05_Yukelson_Steimberg.Models
     
         private static void InicializarJuego(){
             incognitasSalas.Add("motosierra"); // A Jack Baker usa la... 
-            incognitasSalas.Add("muñeca"); // Objeto que de cierta forma representa a Eveline
-            incognitasSalas.Add("no se lo come"); // En la comida familiar luego de la primera pelea con mia, la madre se estresa por que ethan...
+            incognitasSalas.Add("Holomorfos"); // Nombre del enemigo del juego
             incognitasSalas.Add("1408"); // Codigo minijuego cumpleaños
+            incognitasSalas.Add("no se lo come"); // En la comida familiar luego de la primera pelea con mia, la madre se estresa por que ethan...
             incognitasSalas.Add("loser"); // Contraseña para la valvula --> Minijuego cumpleaños
             incognitasSalas.Add("10:15"); // Hora para poner el reloj para conseguir la llave roja.
             incognitasSalas.Add("everywhere"); // Donde estan los coleccionables cabezones?

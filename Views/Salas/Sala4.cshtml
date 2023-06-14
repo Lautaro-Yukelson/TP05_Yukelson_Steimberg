@@ -1,0 +1,38 @@
+@{
+    ViewData["Title"] = "Sala 4";
+}
+
+<div class="text-center">
+    <h1>Sala 4</h1>
+    <p>En la comida familiar luego de la primera pelea con mia, la madre se estresa por que ethan...</p>
+    <form action="~/Home/Habitacion" method="post" id="resolverForm">
+        <input type="number" name="sala" value="4" hidden>
+        <div class="text-center">
+            <input type="radio" name="clave" value="no rezo antes de comer">
+            <label> no rezo antes de comer</label><br>
+            <input type="radio" name="clave" value="no le gusta">
+            <label> no le gusta</label><br>
+            <input type="radio" name="clave" value="no se lo come">
+            <label> no se lo come</label>
+        </div>
+        <button class="btn btn-secondary" type="sumbit">Enviar</button>
+    </form>
+
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="pista" hidden></button>        
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Pista</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  El escupe la comida..
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
