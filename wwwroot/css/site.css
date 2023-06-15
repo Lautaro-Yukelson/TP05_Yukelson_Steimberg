@@ -9,7 +9,7 @@ html {
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+  box-shadow: 0 0 0 0.1rem rgb(231, 231, 231), 0 0 0 0.25rem #258cfb;
 }
 
 html {
@@ -18,11 +18,28 @@ html {
 }
 
 body {
+  background-color: rgb(22, 21, 21);
   margin-bottom: 60px;
 }
 
+p, h1, h2{
+  color: #fff;
+}
+
+p{
+  
+  background-color: rgba(0, 0, 0, 0.24);
+}
+
+*{
+  text-decoration: none;
+}
 
 /************************************************************************************************/
+
+.navbar{
+  color: rgb(231, 231, 231);
+}
 
 a, a:hover{
   text-decoration: none;
@@ -53,18 +70,91 @@ a, a:hover{
   font-size: 24px;
 }
 
+.container{
+  color: #fff;
+}
+
 .item{
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.circulo{
-  width: 15px;
-  height: 15px;
-  border-radius: 50px;
-  border: 1px solid black;
-  background-color: gray;
-  margin-left: 15px;
-  margin-right: 15px;
+.list-group-item{
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+  padding-bottom: 1rem;
+  background-color: rgb(22, 21, 21);
+  color: rgb(231, 231, 231);
+  border: 1px solid rgb(231, 231, 231);
+}
+
+.creditos{
+  margin-left: 15vw;
+  width: 70vw;
+  height: 80vh;
+  background-color: rgb(22, 21, 21);
+  color: rgb(231, 231, 231);
+}
+
+.list-group-item.active{
+  border: 1px solid rgb(231, 231, 231);
+  background-color: rgb(231, 231, 231);
+  color: rgb(22, 21, 21);
+}
+
+.list-group-item.active p{
+  color: rgb(22, 21, 21);
+}
+
+.modal-content {
+  border: 1px solid rgb(53, 52, 52);
+  background-color: rgb(22, 21, 21);
+  color: rgb(231, 231, 231);
+}
+
+.modal-footer, .modal-header{
+  border: 1px solid rgb(53, 52, 52);
+}
+
+.sala4{
+  width: 100vw;
+  height: 80vh;
+  background-image: url(/assets/images/cena.jfif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.principal{
+  background-image: url(/assets/images/puerta.jfif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 80vh;
+}
+
+.no-margin{
+  padding: 0;
+  margin: 0;
+}
+
+.sala8{
+  width: 100vw;
+  height: 80vh;
+  background-image: url(/assets/images/morgue.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.form-control{
+  max-width: 30vw;
+  margin-left: 35vw;
+}
+
+.btn-secondary{
+  margin-top: 40px;
 }

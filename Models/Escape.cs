@@ -17,9 +17,9 @@ namespace TP05_Yukelson_Steimberg.Models
             incognitasSalas.Add("no se lo come"); // En la comida familiar luego de la primera pelea con mia, la madre se estresa por que ethan...
             incognitasSalas.Add("loser"); // Contraseña para la valvula --> Minijuego cumpleaños
             incognitasSalas.Add("10:15"); // Hora para poner el reloj para conseguir la llave roja.
-            incognitasSalas.Add("everywhere"); // Donde estan los coleccionables cabezones?
-            incognitasSalas.Add("albert-01R"); // Pistola que se desbloquea al terminar el juego.
-            incognitasSalas.Add("mia/zoe"); // A quien salvas? Dos finales distintos
+            incognitasSalas.Add("mr-everywhere"); // Donde estan los coleccionables cabezones?
+            incognitasSalas.Add("huella"); // Tres a y una huella
+            incognitasSalas.Add("evelyn"); // ella solo queria una flia
         }
 
         public static int GetEstadoJuego(){
