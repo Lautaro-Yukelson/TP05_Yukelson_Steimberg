@@ -8,7 +8,11 @@ html {
   }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
   box-shadow: 0 0 0 0.1rem rgb(231, 231, 231), 0 0 0 0.25rem #258cfb;
 }
 
@@ -22,31 +26,37 @@ body {
   margin-bottom: 60px;
 }
 
-p, h1, h2{
+p,
+h1,
+h2 {
   color: #fff;
 }
 
-p{
-  
-  background-color: rgba(0, 0, 0, 0.24);
+p {
+  font-size: 24px;
+  text-shadow: 4px 4px 4px rgba(1, 1, 1, 1);
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra */
+  -webkit-text-stroke: 0.8px black; /* Borde */
 }
 
-*{
+* {
   text-decoration: none;
 }
 
 /************************************************************************************************/
 
-.navbar{
+.navbar {
   color: rgb(231, 231, 231);
 }
 
-a, a:hover{
+a,
+a:hover {
   text-decoration: none;
   color: #fff;
 }
 
-.tutorial{
+.tutorial {
   width: 100%;
   height: 100%;
 
@@ -55,32 +65,21 @@ a, a:hover{
   align-items: center;
 }
 
-.tutorial p span{
+.tutorial p span {
   cursor: pointer;
 }
 
-.container-flechas{
-  margin-top: 200px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.container-flechas .item{
-  cursor: pointer;
-  font-size: 24px;
-}
-
-.container{
+.container {
   color: #fff;
 }
 
-.item{
+.item {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.list-group-item{
+.list-group-item {
   display: flex;
   justify-content: space-between;
   padding: 1.5rem;
@@ -90,21 +89,13 @@ a, a:hover{
   border: 1px solid rgb(231, 231, 231);
 }
 
-.creditos{
-  margin-left: 15vw;
-  width: 70vw;
-  height: 80vh;
-  background-color: rgb(22, 21, 21);
-  color: rgb(231, 231, 231);
-}
-
-.list-group-item.active{
+.list-group-item.active {
   border: 1px solid rgb(231, 231, 231);
   background-color: rgb(231, 231, 231);
   color: rgb(22, 21, 21);
 }
 
-.list-group-item.active p{
+.list-group-item.active p {
   color: rgb(22, 21, 21);
 }
 
@@ -114,11 +105,64 @@ a, a:hover{
   color: rgb(231, 231, 231);
 }
 
-.modal-footer, .modal-header{
+.modal-footer,
+.modal-header {
   border: 1px solid rgb(53, 52, 52);
 }
 
-.sala4{
+.no-margin {
+  padding: 0;
+  margin: 0;
+}
+
+.form-control {
+  max-width: 30vw;
+  margin-left: 35vw;
+}
+
+.btn-secondary {
+  margin-top: 40px;
+}
+
+/*********************************************SALAS*********************************************/
+
+.principal {
+  background-image: url(/assets/images/puertaPrincipal.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 80vh;
+}
+
+.sala1 {
+  width: 100vw;
+  height: 80vh;
+  background-image: url(/assets/images/jack.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.sala2 {
+  width: 100vw;
+  height: 80vh;
+  background-image: url(/assets/images/bichos.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.sala3 {
+  width: 100vw;
+  height: 80vh;
+  background-image: url(/assets/images/contra.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.sala4 {
   width: 100vw;
   height: 80vh;
   background-image: url(/assets/images/cena.jfif);
@@ -127,21 +171,34 @@ a, a:hover{
   background-size: cover;
 }
 
-.principal{
-  background-image: url(/assets/images/puerta.jfif);
+.sala5 {
+  width: 100vw;
+  height: 80vh;
+  background-image: url(/assets/images/lucas.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.sala6 {
   width: 100vw;
   height: 80vh;
+  background-image: url(/assets/images/reloj.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-.no-margin{
-  padding: 0;
-  margin: 0;
+.sala7 {
+  width: 100vw;
+  height: 80vh;
+  background-image: url(/assets/images/everywhere.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-.sala8{
+.sala8 {
   width: 100vw;
   height: 80vh;
   background-image: url(/assets/images/morgue.jpg);
@@ -150,11 +207,129 @@ a, a:hover{
   background-size: cover;
 }
 
-.form-control{
-  max-width: 30vw;
-  margin-left: 35vw;
+.sala9 {
+  width: 100vw;
+  height: 80vh;
+  background-image: url(/assets/images/evelyn.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
-.btn-secondary{
-  margin-top: 40px;
+.creditos {
+  margin-left: 15vw;
+  width: 70vw;
+  height: 80vh;
+  background-color: rgb(22, 21, 21);
+  color: rgb(231, 231, 231);
+}
+
+/*********************************************TITULOS*********************************************/
+
+.title {
+  color: var(--glow-color);
+  font-family: "Raleway", sans-serif;
+  font-size: 2em;
+  font-weight: 900;
+  letter-spacing: 0.5em;
+  animation: text-flicker 3s linear infinite;
+  text-shadow: 4px 4px 4px rgba(1, 1, 1, 1);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  -webkit-text-stroke: 0.8px black;
+}
+
+.faulty-letter {
+  opacity: 0.5;
+  animation: faulty-flicker 2s linear infinite;
+}
+
+@keyframes faulty-flicker {
+  0% {
+    opacity: 0.1;
+  }
+  2% {
+    opacity: 0.1;
+  }
+  4% {
+    opacity: 0.5;
+  }
+  19% {
+    opacity: 0.5;
+  }
+  21% {
+    opacity: 0.1;
+  }
+  23% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  83% {
+    opacity: 0.4;
+  }
+  87% {
+    opacity: 1;
+  }
+}
+
+@keyframes text-flicker {
+  0% {
+    opacity: 0.1;
+  }
+  2% {
+    opacity: 1;
+  }
+  8% {
+    opacity: 0.1;
+  }
+  9% {
+    opacity: 1;
+  }
+  12% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  72% {
+    opacity: 0.2;
+  }
+  77% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+
+/*********************************************INPUTS*********************************************/
+
+.input {
+  background-color: #000000;
+  height: 35px;
+  padding: 14px;
+  border-radius: 10px;
+  color: #eeeeee;
+  border: 3px solid #f6662e;
+  box-shadow: 3px 3px 2px #f6662e;
+}
+
+.input:focus {
+  background-color: #000000;
+  color: #eeeeee;
+  outline-color: #f54d0b;
+  box-shadow: -3px -3px 25px #f54d0b;
+  transition: 0.1s;
+  transition-property: box-shadow;
+  outline: none;
 }
