@@ -333,3 +333,7 @@ a:hover {
   transition-property: box-shadow;
   outline: none;
 }
+
+.form-control:focus {
+  border-color: #f6662e;
+}
