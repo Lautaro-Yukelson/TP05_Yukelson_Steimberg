@@ -43,6 +43,10 @@ public class HomeController : Controller
         }
     }
 
+    public IActionResult Ranking(){
+        return View();
+    }
+
     public IActionResult Habitacion(int sala, string clave)
     {
         ViewBag.resuelto = Escape.ResolverSala(sala, clave);
