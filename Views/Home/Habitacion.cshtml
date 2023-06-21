@@ -33,8 +33,11 @@
     document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('resultado').click();
     });
-
     function siguienteSala(){
-        window.location.href = "../Salas/Sala" + @ViewBag.siguienteSala;
+        if (@ViewBag.siguienteSala >= 10){
+            window.location.href = "Creditos";
+        } else{
+            window.location.href = "../Salas/Sala" + @ViewBag.siguienteSala;
+        }
     }
 </script>

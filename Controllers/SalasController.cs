@@ -7,40 +7,49 @@ namespace TP05_Yukelson_Steimberg.Controllers;
 public class SalasController : Controller
 {
     public IActionResult Sala1(){
-        ViewBag.sala = Escape.GetEstadoJuego();
-        return View();
+        int temp = Escape.GetEstadoJuego();
+        ViewBag.sala = temp;
+        return View("Sala" + temp);
     }
     public IActionResult Sala2(){
-        ViewBag.sala = Escape.GetEstadoJuego();
-        return View();
+        int temp = Escape.GetEstadoJuego();
+        ViewBag.sala = temp;
+        return View("Sala" + temp);
     }
     public IActionResult Sala3(){
-        ViewBag.sala = Escape.GetEstadoJuego();
-        return View();
+        int temp = Escape.GetEstadoJuego();
+        ViewBag.sala = temp;
+        return View("Sala" + temp);
     }
     public IActionResult Sala4(){
-        ViewBag.sala = Escape.GetEstadoJuego();
-        return View();
+        int temp = Escape.GetEstadoJuego();
+        ViewBag.sala = temp;
+        return View("Sala" + temp);
     }
     public IActionResult Sala5(){
-        ViewBag.sala = Escape.GetEstadoJuego();
-        return View();
+        int temp = Escape.GetEstadoJuego();
+        ViewBag.sala = temp;
+        return View("Sala" + temp);
     }
     public IActionResult Sala6(){
-        ViewBag.sala = Escape.GetEstadoJuego();
-        return View();
+        int temp = Escape.GetEstadoJuego();
+        ViewBag.sala = temp;
+        return View("Sala" + temp);
     }
     public IActionResult Sala7(){
-        ViewBag.sala = Escape.GetEstadoJuego();
-        return View();
+        int temp = Escape.GetEstadoJuego();
+        ViewBag.sala = temp;
+        return View("Sala" + temp);
     }
     public IActionResult Sala8(){
-        ViewBag.sala = Escape.GetEstadoJuego();
-        return View();
+        int temp = Escape.GetEstadoJuego();
+        ViewBag.sala = temp;
+        return View("Sala" + temp);
     }
     public IActionResult Sala9(){
-        ViewBag.sala = Escape.GetEstadoJuego();
-        return View();
+        int temp = Escape.GetEstadoJuego();
+        ViewBag.sala = temp;
+        return View("Sala" + temp);
     }
 
 }

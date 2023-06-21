@@ -56,6 +56,15 @@ a:hover {
   color: #fff;
 }
 
+.nav-link{
+  font-size: 17px;
+  color: white;
+}
+
+.nav-link:hover{
+  color:#f54d0b;
+}
+
 .tutorial {
   width: 100%;
   height: 100%;
@@ -319,7 +328,7 @@ a:hover {
   height: 35px;
   padding: 14px;
   border-radius: 10px;
-  color: #eeeeee;
+  color: #eeeeee; 
   border: 3px solid #f6662e;
   box-shadow: 3px 3px 2px #f6662e;
 }
@@ -337,3 +346,18 @@ a:hover {
 .form-control:focus {
   border-color: #f6662e;
 }
+
+.form-check-label{
+  margin-left: 15px;
+}
+.form-check-input{ 
+  border: 3px solid #f6662e;  
+  box-shadow: -3px -3px 25px #f54d0b;
+}
+.form-check-input:checked{
+  
+  background-color: #f54d0b;
+  border-color: #f54d0b;
+  outline: none;
+}
+

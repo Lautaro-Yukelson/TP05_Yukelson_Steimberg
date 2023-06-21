@@ -37,6 +37,12 @@
 <script>
     setTimeout(function(){
         window.location.href = "../Salas/Sala" + @ViewBag.sala;
+		if (@ViewBag.sala >= 10){
+            window.location.href = "Creditos";
+        } else{
+            window.location.href = "../Salas/Sala" + @ViewBag.sala;
+        }
     }, 1500);
+	
 </script>
 
