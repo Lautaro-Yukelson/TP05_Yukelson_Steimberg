@@ -3,7 +3,10 @@ public static class Escape
     public static List<string> incognitasSalas { get; set; } = new List<string> { };
     private static int estadoJuego { get; set; } = 0;
     private static int cantErrores { get; set;} = 0;
-    public static TimeOnly horaInicio { get; set; } = TimeOnly.FromDateTime(DateTime.Now);
+    private static bool yaTermino { get; set;} = false;
+    private static TimeOnly horaInicio { get; set; } = TimeOnly.FromDateTime(DateTime.Now);
+    private static TimeSpan tiempoTranscurrido { get; set;}
+
 
 
     private static void InicializarJuego()
@@ -42,8 +45,11 @@ public static class Escape
         
     }
     public static TimeSpan TerminarJuego(){
-        TimeOnly horaFin = TimeOnly.FromDateTime(DateTime.Now);
-        TimeSpan tiempoTranscurrido = horaFin - horaInicio;
+        if (!yaTermino){
+            TimeOnly horaFin = TimeOnly.FromDateTime(DateTime.Now);
+            tiempoTranscurrido = horaFin - horaInicio;
+            yaTermino = true;
+        }
         return tiempoTranscurrido;
     }
 }
