@@ -9,6 +9,31 @@
 
         <h2>Estadisticas</h2>
         <ul class="list-group">
+            @{
+                for (int i = 0; i < ViewBag.Jugadores.Count; i++){
+                    if (i == 0){
+                        <li id="@Html.Raw(i)" class="creditos__item list-group-item active">
+                            <p>Nombre:</p>
+                            <p>@ViewBag.Jugadores[i].Nombre</p>
+                            <p>Tiempo:</p>
+                            <p>@ViewBag.Jugadores[i].Tiempo</p>
+                            <p>Errores:</p>
+                            <p>@ViewBag.Jugadores[i].Errores</p>
+                        </li>
+                    }
+                    else{
+                        <li id="@Html.Raw(i)" class="creditos__item list-group-item">
+                            <p>Nombre:</p>
+                            <p>@ViewBag.Jugadores[i].Nombre</p>
+                            <p>Tiempo:</p>
+                            <p>@ViewBag.Jugadores[i].Tiempo</p>
+                            <p>Errores:</p>
+                            <p>@ViewBag.Jugadores[i].Errores</p>
+                        </li>
+                    }
+                }
+            }
+        </ul>
             <li id="1" class="creditos__item list-group-item active"><p>Nombre:</p> <p>v</p> <p>Tiempo:</p> <p>v</p> <p>Errores:</p><p>v</p></li>
             <li id="1" class="creditos__item list-group-item"><p>Nombre:</p> <p>v</p> <p>Tiempo:</p> <p>v</p> <p>Errores:</p><p>v</p></li>
             <li id="1" class="creditos__item list-group-item"><p>Nombre:</p> <p>v</p> <p>Tiempo:</p> <p>v</p> <p>Errores:</p><p>v</p></li>

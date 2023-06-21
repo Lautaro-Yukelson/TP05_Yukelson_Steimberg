@@ -44,6 +44,8 @@ public class HomeController : Controller
     }
 
     public IActionResult Ranking(){
+        Escape.OrdenarJugadores();
+        ViewBag.Jugadores = Escape.GetJugadores();
         return View();
     }
 
