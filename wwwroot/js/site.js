@@ -46,3 +46,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+let selectedHour = 0;
+
+function setTime(timeType, value) {
+  if (timeType == 'hour') {
+    selectedHour = value;
+    document.getElementById('hourNumbers').style.display = 'none';
+    document.getElementById('minuteNumbers').style.display = 'flex';
+  } else if (timeType == 'minute') {
+    const timeInput = document.getElementById('appt');
+    const date = new Date();
+    date.setHours(selectedHour);
+    date.setMinutes(value);
+    const formattedTime = date.toTimeString().slice(0, 5);
+    timeInput.value = formattedTime;
+    document.getElementById('send').click();
+  }
+}

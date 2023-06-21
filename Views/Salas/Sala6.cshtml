@@ -6,10 +6,41 @@
     <p>Estas en busca de la tarjeta roja y el reloj de la abuela parece tener algo extraño..</p>
     <form action="~/Home/Habitacion" method="post" id="resolverForm">
         <input type="number" name="sala" value="6" hidden>
-        <input type="time" id="appt" name="clave" min="00:00" max="23:59" required>
-        <button class="btn btn-secondary" type="sumbit">Enviar</button>
+        <input id="appt" name="clave" type="time" hidden>
+        <div id="timePicker">
+        <div class="clock">
+            <div class="numbers" id="hourNumbers">
+                <div class="number" onclick="setTime('hour', 1)">1</div>
+                <div class="number" onclick="setTime('hour', 2)">2</div>
+                <div class="number" onclick="setTime('hour', 3)">3</div>
+                <div class="number" onclick="setTime('hour', 4)">4</div>
+                <div class="number" onclick="setTime('hour', 5)">5</div>
+                <div class="number" onclick="setTime('hour', 6)">6</div>
+                <div class="number" onclick="setTime('hour', 7)">7</div>
+                <div class="number" onclick="setTime('hour', 8)">8</div>
+                <div class="number" onclick="setTime('hour', 9)">9</div>
+                <div class="number" onclick="setTime('hour', 10)">10</div>
+                <div class="number" onclick="setTime('hour', 11)">11</div>
+                <div class="number" onclick="setTime('hour', 12)">12</div>
+            </div>
+            <div class="numbers" id="minuteNumbers" style="display: none;">
+                <div class="number" onclick="setTime('minute', 0)">00</div>
+                <div class="number" onclick="setTime('minute', 5)">05</div>
+                <div class="number" onclick="setTime('minute', 10)">10</div>
+                <div class="number" onclick="setTime('minute', 15)">15</div>
+                <div class="number" onclick="setTime('minute', 20)">20</div>
+                <div class="number" onclick="setTime('minute', 25)">25</div>
+                <div class="number" onclick="setTime('minute', 30)">30</div>
+                <div class="number" onclick="setTime('minute', 35)">35</div>
+                <div class="number" onclick="setTime('minute', 40)">40</div>
+                <div class="number" onclick="setTime('minute', 45)">45</div>
+                <div class="number" onclick="setTime('minute', 50)">50</div>
+                <div class="number" onclick="setTime('minute', 55)">55</div>
+            </div>
+        </div>
+    </div>
+        <button id="send" class="btn btn-secondary" type="sumbit">Enviar</button>
     </form>
-
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="pista" hidden></button>        
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
