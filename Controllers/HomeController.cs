@@ -8,35 +8,35 @@ public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
 
-    public HomeController(ILogger<HomeController> logger)
-    {
+    public HomeController(ILogger<HomeController> logger){
         _logger = logger;
     }
 
-    public IActionResult Index()
-    {
+    public IActionResult Index(){
         return View();
     }
 
-    public IActionResult Tutorial()
-    {
+    public IActionResult Tutorial(){
         return View();
     }
 
-    public IActionResult Comenzar()
-    {
+    public IActionResult Comenzar(){
         ViewBag.sala = Escape.GetEstadoJuego();
         return View();
     }
 
-    public IActionResult Creditos()
+    public IActionResult Habitacion(int sala, string clave)
     {
-        if (Escape.GetEstadoJuego() != 10)
-        {
-            return View("../Salas/Sala" + Escape.GetEstadoJuego());
+        ViewBag.resuelto = Escape.ResolverSala(sala, clave);
+        ViewBag.siguienteSala = Escape.GetEstadoJuego();
+        return RedirectToAction("Sala", "Salas");
+    }
+
+    public IActionResult Creditos(){
+        if (Escape.GetEstadoJuego() != 10){
+            return RedirectToAction("Sala", "Salas");
         }
-        else
-        {
+        else{
             ViewBag.tiempoTranscurrido = Escape.TerminarJuego();
             ViewBag.errores = Escape.GetErrores();
             return View();
@@ -47,16 +47,8 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Habitacion(int sala, string clave)
-    {
-        ViewBag.resuelto = Escape.ResolverSala(sala, clave);
-        ViewBag.siguienteSala = Escape.GetEstadoJuego();
-        return View();
-    }
-
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
+    public IActionResult Error(){
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
 }
