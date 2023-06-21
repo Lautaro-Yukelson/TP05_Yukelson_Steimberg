@@ -8,7 +8,8 @@
     <form action="~/Home/Habitacion" method="post" id="resolverForm">
         <input type="number" name="sala" value="1" hidden>
         <input class="form-control input" type="text" name="clave" placeholder="Respuesta" autocomplete="off">
-        <button class="btn btn-secondary" type="sumbit">Enviar</button>
+        <button hidden id="btnEnviar" class="btn btn-secondary" type="sumbit"></button>
+        <div class="boton submit"><a><span>Enviar</span></a></div>
     </form>
 
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-pista" id="pista" hidden></button>        

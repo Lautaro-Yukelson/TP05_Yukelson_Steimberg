@@ -64,3 +64,13 @@ function setTime(timeType, value) {
     document.getElementById("send").click();
   }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  var boton = document.querySelector(".submit");
+  var btnEnviar = document.getElementById("btnEnviar");
+
+  boton.addEventListener("click", function () {
+    console.log("hola");
+    btnEnviar.click();
+  });
+});

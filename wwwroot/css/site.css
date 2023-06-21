@@ -472,3 +472,94 @@ a:hover {
   transform: translate(-50%, -50%) rotate(135deg);
   top: calc(50% - 35px); /* Ajuste vertical para centrar */
 }
+
+/*********************************************EL BOTON MAS FACHERO DEL MUNDO*********************************************/
+
+.boton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+
+.boton a {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  border: 2px solid #f54d0b;
+  margin: 40px;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 2px;
+  color: white;
+  -webkit-box-reflect: below 0px linear-gradient(transparent, #0002);
+  transition: 0.5s;
+  transition-delay: 0s;
+}
+
+.boton a:hover {
+  transition-delay: 1s;
+  color: black !important;
+  box-shadow: 0 0 10px #f54d0b, 0 0 20px #f54d0b, 0 0 40px #f54d0b,
+    0 0 80px #f54d0b, 0 0 160px #f54d0b;
+}
+
+.boton a span {
+  position: relative;
+  z-index: 100;
+}
+
+.boton a:nth-child(2) {
+  filter: hue-rotate(80deg);
+}
+.boton a::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 2px;
+  background-color: #f54d0b;
+  box-shadow: 5px -8px #f54d0b, 5px 8px #f54d0b;
+  transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+  transition-delay: 1s, 0.5s, 0s, 0s;
+}
+
+.boton a:hover::before {
+  width: 60%;
+  height: 100%;
+  left: -2px;
+  box-shadow: 5px 0 0 #f54d0b, 5px 0 0 #f54d0b;
+  transition-delay: 0s, 0s, 0.5s, 1s;
+}
+
+.boton a::after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 2px;
+  background-color: #f54d0b;
+  box-shadow: -5px -8px #f54d0b, -5px 8px #f54d0b;
+  transition: width 0.5s, left 0.5s, height 0.5s, box-shadow 0.5s;
+  transition-delay: 1s, 0.5s, 0s, 0s;
+}
+
+.boton a:hover::after {
+  width: 60%;
+  height: 100%;
+  right: -2px;
+  box-shadow: -5px 0 0 #f54d0b, -5px 0 0 #f54d0b;
+  transition-delay: 0s, 0s, 0.5s, 1s;
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
