@@ -56,13 +56,13 @@ a:hover {
   color: #fff;
 }
 
-.nav-link{
+.nav-link {
   font-size: 17px;
   color: white;
 }
 
-.nav-link:hover{
-  color:#f54d0b;
+.nav-link:hover {
+  color: #f54d0b;
 }
 
 .tutorial {
@@ -328,7 +328,7 @@ a:hover {
   height: 35px;
   padding: 14px;
   border-radius: 10px;
-  color: #eeeeee; 
+  color: #eeeeee;
   border: 3px solid #f6662e;
   box-shadow: 3px 3px 2px #f6662e;
 }
@@ -347,21 +347,20 @@ a:hover {
   border-color: #f6662e;
 }
 
-.form-check-label{
+.form-check-label {
   margin-left: 15px;
 }
-.form-check-input{ 
-  border: 3px solid #f6662e;  
+.form-check-input {
+  border: 3px solid #f6662e;
   box-shadow: -3px -3px 25px #f54d0b;
 }
-.form-check-input:checked{
-  
+.form-check-input:checked {
   background-color: #f54d0b;
   border-color: #f54d0b;
   outline: none;
 }
 
-#timePicker{
+#timePicker {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -401,23 +400,75 @@ a:hover {
   justify-content: center;
   cursor: pointer;
   position: absolute;
-  transform-origin: 50% calc(100% - 10px);
-  background-color: #f6662e;
+  transform-origin: center center;
+  background-color: #000;
+  color: #f6662e;
 }
 
 .number:hover {
-  background-color: lightgray;
+  color: #000;
+  background-color: #f54d0b;
+  transition: 0.3s;
 }
 
-.number:nth-child(2) { transform: rotate(30deg) translateY(-80px); }
-.number:nth-child(3) { transform: rotate(60deg) translateY(-80px); }
-.number:nth-child(4) { transform: rotate(90deg) translateY(-75px); }
-.number:nth-child(5) { transform: rotate(120deg) translateY(-80px); }
-.number:nth-child(6) { transform: rotate(150deg) translateY(-80px); }
-.number:nth-child(7) { transform: rotate(180deg) translateY(-80px); }
-.number:nth-child(8) { transform: rotate(210deg) translateY(-80px); }
-.number:nth-child(9) { transform: rotate(240deg) translateY(-80px); }
-.number:nth-child(10) { transform: rotate(270deg) translateY(-80px); }
-.number:nth-child(11) { transform: rotate(300deg) translateY(-80px); }
-.number:nth-child(12) { transform: rotate(330deg) translateY(-80px); }
-.number:nth-child(1) { transform: rotate(0deg) translateY(-80px); }
+.number:nth-child(2) {
+  transform: rotate(30deg) translateY(-80px);
+}
+.number:nth-child(3) {
+  transform: rotate(60deg) translateY(-80px);
+}
+.number:nth-child(4) {
+  transform: rotate(90deg) translateY(-75px);
+}
+.number:nth-child(5) {
+  transform: rotate(120deg) translateY(-80px);
+}
+.number:nth-child(6) {
+  transform: rotate(150deg) translateY(-80px);
+}
+.number:nth-child(7) {
+  transform: rotate(180deg) translateY(-80px);
+}
+.number:nth-child(8) {
+  transform: rotate(210deg) translateY(-80px);
+}
+.number:nth-child(9) {
+  transform: rotate(240deg) translateY(-80px);
+}
+.number:nth-child(10) {
+  transform: rotate(270deg) translateY(-80px);
+}
+.number:nth-child(11) {
+  transform: rotate(300deg) translateY(-80px);
+}
+.number:nth-child(12) {
+  transform: rotate(330deg) translateY(-80px);
+}
+.number:nth-child(1) {
+  transform: rotate(0deg) translateY(-80px);
+}
+
+.arrow {
+  position: absolute;
+  width: 3px;
+  height: 55px;
+  background-color: #f54d0b;
+  transform-origin: bottom center;
+  transition: transform 0.3s ease-in-out;
+  left: calc(50% - 1.5px); /* Ajuste horizontal para centrar */
+}
+
+.arrow-hour {
+  height: 40px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  top: calc(50% - 30px); /* Ajuste vertical para centrar */
+}
+
+.arrow-minute {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(135deg);
+  top: calc(50% - 35px); /* Ajuste vertical para centrar */
+}
