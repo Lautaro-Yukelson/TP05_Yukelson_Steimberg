@@ -37,8 +37,8 @@ public class HomeController : Controller
         }
         else
         {
-            TimeSpan tiempoTranscurrido = Escape.TerminarJuego();
-            ViewBag.tiempoTranscurrido = tiempoTranscurrido;
+            ViewBag.tiempoTranscurrido = Escape.TerminarJuego();
+            ViewBag.errores = Escape.GetErrores();
             return View();
         }
     }

@@ -2,6 +2,7 @@ public static class Escape
 {
     public static List<string> incognitasSalas { get; set; } = new List<string> { };
     private static int estadoJuego { get; set; } = 0;
+    private static int cantErrores { get; set;} = 0;
     public static TimeOnly horaInicio { get; set; } = TimeOnly.FromDateTime(DateTime.Now);
 
 
@@ -24,14 +25,21 @@ public static class Escape
         return estadoJuego;
     }
 
+    public static int GetErrores(){
+        return cantErrores;
+    }
+
     public static bool ResolverSala(int sala, string incognita)
     {
         if (incognita == incognitasSalas[sala - 1])
         {
             estadoJuego++;
             return true;
+        } else {
+            cantErrores++;
+            return false;
         }
-        return false;
+        
     }
     public static TimeSpan TerminarJuego(){
         TimeOnly horaFin = TimeOnly.FromDateTime(DateTime.Now);
