@@ -22,13 +22,18 @@ public class HomeController : Controller
 
     public IActionResult Comenzar(){
         ViewBag.sala = Escape.GetEstadoJuego();
+        Escape.ResetearJuego();
+        Escape.primeraVez = true;
+        return View();
+    }
+
+    public IActionResult Continuar(){
         Escape.primeraVez = true;
         return View();
     }
 
     [HttpPost]
-    public IActionResult Habitacion(int sala, string clave)
-    {
+    public IActionResult Habitacion(int sala, string clave){
         Escape.resuelto = Escape.ResolverSala(sala, clave);
         ViewBag.siguienteSala = Escape.GetEstadoJuego();
         return RedirectToAction("Sala", "Salas");
@@ -36,7 +41,7 @@ public class HomeController : Controller
 
     public IActionResult Creditos(){
         if (Escape.GetEstadoJuego() != 10){
-            return RedirectToAction("Sala", "Salas");
+            return RedirectToAction("Continuar", "Home");
         }
         else{
             ViewBag.tiempoTranscurrido = Escape.TerminarJuego();
