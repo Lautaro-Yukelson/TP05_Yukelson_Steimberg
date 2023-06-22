@@ -13,22 +13,22 @@
                 for (int i = 0; i < ViewBag.Jugadores.Count; i++){
                     if (i == 0){
                         <li id="@Html.Raw(i)" class="creditos__item list-group-item active">
-                            <p>Nombre:</p>
-                            <p>@ViewBag.Jugadores[i].Nombre</p>
-                            <p>Tiempo:</p>
-                            <p>@string.Format("{0}:{1:D2}", (int)ViewBag.Jugadores[i].Tiempo.TotalMinutes, (int)ViewBag.Jugadores[i].Tiempo.TotalSeconds % 60)</p>
-                            <p>Errores:</p>
-                            <p>@ViewBag.Jugadores[i].Errores</p>
+                            <p class="cat-ranking">Nombre:</p>
+                            <p class="cat-ranking">@ViewBag.Jugadores[i].Nombre</p>
+                            <p class="cat-ranking">Tiempo:</p>
+                            <p class="cat-ranking">@string.Format("{0}:{1:D2}", (int)ViewBag.Jugadores[i].Tiempo.TotalMinutes, (int)ViewBag.Jugadores[i].Tiempo.TotalSeconds % 60)</p>
+                            <p class="cat-ranking">Errores:</p>
+                            <p class="cat-ranking">@ViewBag.Jugadores[i].Errores</p>
                         </li>
                     }
                     else{
                         <li id="@Html.Raw(i)" class="creditos__item list-group-item">
-                            <p>Nombre:</p>
-                            <p>@ViewBag.Jugadores[i].Nombre</p>
-                            <p>Tiempo:</p>
-                            <p>@string.Format("{0}:{1:D2}", (int)ViewBag.Jugadores[i].Tiempo.TotalMinutes, (int)ViewBag.Jugadores[i].Tiempo.TotalSeconds % 60)</p>
-                            <p>Errores:</p>
-                            <p>@ViewBag.Jugadores[i].Errores</p>
+                            <p class="cat-ranking">Nombre:</p>
+                            <p class="cat-ranking">@ViewBag.Jugadores[i].Nombre</p>
+                            <p class="cat-ranking">Tiempo:</p>
+                            <p class="cat-ranking">@string.Format("{0}:{1:D2}", (int)ViewBag.Jugadores[i].Tiempo.TotalMinutes, (int)ViewBag.Jugadores[i].Tiempo.TotalSeconds % 60)</p>
+                            <p class="cat-ranking">Errores:</p>
+                            <p class="cat-ranking">@ViewBag.Jugadores[i].Errores</p>
                         </li>
                     }
                 }
