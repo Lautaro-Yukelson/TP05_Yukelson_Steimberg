@@ -19,8 +19,7 @@
         </ul>
     </div>
 
-    <!-- Este es el boton que tener que hacer fachero -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-guardar" id="pista">Hola</button>   
+    <div type="button" class="boton" data-bs-toggle="modal" data-bs-target="#modal-guardar" id="pista"><a><span>Guarda tu resultado</span></a></div>   
 
     <div class="modal fade" id="modal-guardar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -30,7 +29,7 @@
                 </div>
                 <div class="modal-body">
                     <form action="GuardarResultado" method="post">
-                        <input class="form-control" type="text" name="nombre" placeholder="Ingresa tu nombre...">
+                         <input class="form-control input inputForm no-margin" type="text" name="clave" placeholder="Ingresa tu nombre..." autocomplete="off">
                         <input type="text" name="tiempo" value="@Html.Raw(@ViewBag.tiempoTranscurrido)" hidden>
                         <input type="number" name="errores" value="@Html.Raw(@ViewBag.errores)" hidden>
                         <button class="btn btn-secondary" type="submit">Guardar</button>
