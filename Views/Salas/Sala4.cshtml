@@ -7,13 +7,21 @@
     <p>En la comida familiar luego de la primera pelea con mia, la madre se estresa por que ethan...</p>
     <form action="~/Home/Habitacion" method="post" id="resolverForm">
         <input type="number" name="sala" value="4" hidden>
-        <div class="text-center">
-            <input class= "form-check-input" type="radio" name="clave" value="no rezo antes de comer">
-            <label class= "form-check-label"> no rezo antes de comer</label><br>
-            <input class= "form-check-input" type="radio" name="clave" value="no le gusta">
-            <label class= "form-check-label"> no le gusta</label><br>
-            <input class= "form-check-input" type="radio" name="clave" value="no se lo come">
-            <label class= "form-check-label"> no se lo come</label>
+        <div class="text-center centro" >
+            <div class="radios">
+                <div>
+                <input class= "form-check-input" type="radio" name="clave" value="no rezo antes de comer">
+                <label> no rezo antes de comer</label><br>
+                </div>
+                <div>
+                <input class= "form-check-input" type="radio" name="clave" value="no le gusta">
+                <label> no le gusta</label><br>
+                </div>
+                <div>
+                <input class= "form-check-input" type="radio" name="clave" value="no se lo come">
+                <label> no se lo come</label>
+                </div>   
+            </div>
         </div>
         <button hidden id="btnEnviar" class="btn btn-secondary" type="sumbit"></button>
         <div class="boton"><a class="submit"><span>Enviar</span></a></div>

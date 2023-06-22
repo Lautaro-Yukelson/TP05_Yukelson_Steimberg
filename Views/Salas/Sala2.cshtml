@@ -7,13 +7,21 @@
     <p>Como se llaman los enemigos del juego?</p>
     <form action="~/Home/Habitacion" method="post" id="resolverForm">
         <input type="number" name="sala" value="2" hidden>
-        <div class="text-center" >
-            <input class= "form-check-input" type="radio" name="clave" value="Zombies">
-            <label> Zombies</label><br>
-            <input class= "form-check-input" type="radio" name="clave" value="Holomorfos">
-            <label> Holomorfos</label><br>
-            <input class= "form-check-input" type="radio" name="clave" value="Ganados">
-            <label> Ganados</label>
+        <div class="text-center centro" >
+            <div class="radios">
+                <div>
+                <input class= "form-check-input" type="radio" name="clave" value="Zombies">
+                <label> Zombies</label><br>
+                </div>
+                <div>
+                <input class= "form-check-input" type="radio" name="clave" value="Holomorfos">
+                <label> Holomorfos</label><br>
+                </div>
+                <div>
+                <input class= "form-check-input" type="radio" name="clave" value="Ganados">
+                <label> Ganados</label>
+                </div>   
+            </div>
         </div>
         <button hidden id="btnEnviar" class="btn btn-secondary" type="sumbit"></button>
         <div class="boton"><a class="submit"><span>Enviar</span></a></div>
