@@ -56,6 +56,12 @@ public class HomeController : Controller
         return View();
     }
 
+    [HttpPost]
+    public IActionResult VolverAEmpezar(){
+        Escape.ResetearJuego();
+        return RedirectToAction("Comenzar", "Home");
+    }
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error(){
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });

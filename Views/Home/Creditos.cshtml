@@ -19,7 +19,13 @@
         </ul>
     </div>
 
-    <div type="button" class="boton" data-bs-toggle="modal" data-bs-target="#modal-guardar" id="pista"><a><span>Guarda tu resultado</span></a></div>   
+    <div class="botones">
+        <div type="button" class="boton" data-bs-toggle="modal" data-bs-target="#modal-guardar" id="pista"><a><span>Guarda tu resultado</span></a></div>
+        <form action="VolverAEmpezar" method="post">
+            <button hidden id="btnEnviar" class="btn btn-secondary" type="sumbit"></button>
+            <div class="boton submit"><a><span>Volver a empezar!</span></a></div>
+        </form>
+    </div>
 
     <div class="modal fade" id="modal-guardar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">

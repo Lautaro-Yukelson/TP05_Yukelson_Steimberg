@@ -8,7 +8,7 @@ public static class Escape
     private static int estadoJuego { get; set; } = 0;
     private static int cantErrores { get; set;} = 0;
     private static bool yaTermino { get; set;} = false;
-    private static TimeOnly horaInicio { get; set; } = TimeOnly.FromDateTime(DateTime.Now);
+    private static TimeOnly horaInicio { get; set; }
     private static TimeSpan tiempoTranscurrido { get; set;}
 
     private static void InicializarJuego(){
@@ -21,11 +21,19 @@ public static class Escape
         incognitasSalas.Add("mr-everywhere"); // Donde estan los coleccionables cabezones?
         incognitasSalas.Add("huella"); // Tres a y una huella
         incognitasSalas.Add("evelyn"); // ella solo queria una flia
+
+        horaInicio = TimeOnly.FromDateTime(DateTime.Now);
     }
 
     public static int GetEstadoJuego(){
         if (estadoJuego == 0) { InicializarJuego(); estadoJuego++; }
         return estadoJuego;
+    }
+
+    public static void ResetearJuego(){
+        estadoJuego = 1;
+        yaTermino = false;
+        horaInicio = TimeOnly.FromDateTime(DateTime.Now);
     }
 
     public static int GetErrores(){
