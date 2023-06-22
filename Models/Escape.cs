@@ -8,6 +8,8 @@ public static class Escape
     private static int estadoJuego { get; set; } = 0;
     private static int cantErrores { get; set;} = 0;
     private static bool yaTermino { get; set;} = false;
+    public static bool primeraVez { get; set;}
+    public static bool resuelto { get; set; }
     private static TimeOnly horaInicio { get; set; }
     private static TimeSpan tiempoTranscurrido { get; set;}
 
@@ -23,6 +25,7 @@ public static class Escape
         incognitasSalas.Add("evelyn"); // ella solo queria una flia
 
         horaInicio = TimeOnly.FromDateTime(DateTime.Now);
+
     }
 
     public static int GetEstadoJuego(){
@@ -53,6 +56,7 @@ public static class Escape
     }
 
     public static bool ResolverSala(int sala, string incognita){
+        Escape.primeraVez = false;
         if (incognita == incognitasSalas[sala - 1]){
             estadoJuego++;
             return true;

@@ -16,7 +16,7 @@
             <label> lil-kendo</label>
         </div>
         <button hidden id="btnEnviar" class="btn btn-secondary" type="sumbit"></button>
-        <div class="boton submit"><a><span>Enviar</span></a></div>
+        <div class="boton"><a class="submit"><span>Enviar</span></a></div>
     </form>
 
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="pista" hidden></button>        
@@ -36,3 +36,21 @@
         </div>
     </div>
 </div>
+
+<script>
+    if(@ViewBag.resultado == 0){
+        Swal.fire({
+            title: 'Error!',
+            text: 'Recuerda que tienes la P para pedir una pista',
+            icon: 'error',
+            confirmButtonText: 'Reintentar'
+        });
+    } else if (@ViewBag.resultado == 1){
+        Swal.fire({
+            title: 'Correcto!',
+            text: 'Muy bien, pero estaras listo/a para lo siguiente?',
+            icon: 'success',
+            confirmButtonText: 'Continuar'
+        });
+    }
+</script>

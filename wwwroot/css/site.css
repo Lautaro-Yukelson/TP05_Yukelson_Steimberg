@@ -484,12 +484,12 @@ a:hover {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  cursor: pointer;
 }
 
 .boton a {
   position: relative;
   display: inline-block;
+  cursor: pointer ;
   padding: 15px 30px;
   border: 2px solid #f54d0b;
   margin: 40px;
@@ -566,4 +566,15 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+
+/*POPUP*/
+.swal2-popup{
+  background-color: rgb(22, 21, 21);
+  color: #fff;
+}
+
+div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm{
+  background-color: #f6662e !important;
 }

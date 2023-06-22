@@ -9,6 +9,13 @@ public class SalasController : Controller
     public IActionResult Sala(){
         ViewBag.sala = Escape.GetEstadoJuego();
         if (ViewBag.sala != 10){
+            if (Escape.primeraVez){
+                ViewBag.resultado = 2; 
+            } else if (Escape.resuelto){
+                ViewBag.resultado = 1;
+            } else {
+                ViewBag.resultado = 0;
+            }
             return View("Sala" + ViewBag.sala);
         } else {
             return RedirectToAction("Creditos", "Home");

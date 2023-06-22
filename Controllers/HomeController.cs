@@ -22,13 +22,14 @@ public class HomeController : Controller
 
     public IActionResult Comenzar(){
         ViewBag.sala = Escape.GetEstadoJuego();
+        Escape.primeraVez = true;
         return View();
     }
 
     [HttpPost]
     public IActionResult Habitacion(int sala, string clave)
     {
-        ViewBag.resuelto = Escape.ResolverSala(sala, clave);
+        Escape.resuelto = Escape.ResolverSala(sala, clave);
         ViewBag.siguienteSala = Escape.GetEstadoJuego();
         return RedirectToAction("Sala", "Salas");
     }
