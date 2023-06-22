@@ -16,7 +16,7 @@
                             <p>Nombre:</p>
                             <p>@ViewBag.Jugadores[i].Nombre</p>
                             <p>Tiempo:</p>
-                            <p>@ViewBag.Jugadores[i].Tiempo</p>
+                            <p>@string.Format("{0}:{1:D2}", (int)ViewBag.Jugadores[i].Tiempo.TotalMinutes, (int)ViewBag.Jugadores[i].Tiempo.TotalSeconds % 60)</p>
                             <p>Errores:</p>
                             <p>@ViewBag.Jugadores[i].Errores</p>
                         </li>
@@ -26,12 +26,13 @@
                             <p>Nombre:</p>
                             <p>@ViewBag.Jugadores[i].Nombre</p>
                             <p>Tiempo:</p>
-                            <p>@ViewBag.Jugadores[i].Tiempo</p>
+                            <p>@string.Format("{0}:{1:D2}", (int)ViewBag.Jugadores[i].Tiempo.TotalMinutes, (int)ViewBag.Jugadores[i].Tiempo.TotalSeconds % 60)</p>
                             <p>Errores:</p>
                             <p>@ViewBag.Jugadores[i].Errores</p>
                         </li>
                     }
                 }
             }
+        </ul>
     </div>
 </div>

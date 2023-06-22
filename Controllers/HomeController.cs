@@ -25,6 +25,7 @@ public class HomeController : Controller
         return View();
     }
 
+    [HttpPost]
     public IActionResult Habitacion(int sala, string clave)
     {
         ViewBag.resuelto = Escape.ResolverSala(sala, clave);
@@ -41,6 +42,12 @@ public class HomeController : Controller
             ViewBag.errores = Escape.GetErrores();
             return View();
         }
+    }
+
+    [HttpPost]
+    public IActionResult GuardarResultado(string nombre, TimeSpan tiempo, int errores){
+        Escape.AgregarJugador(new Jugador(nombre, tiempo, errores));
+        return RedirectToAction("Ranking", "Home");
     }
 
     public IActionResult Ranking(){
