@@ -1,11 +1,10 @@
-﻿var contPistas = 0;
-
-document.addEventListener("keydown", (event) => {
+﻿document.addEventListener("keydown", (event) => {
   var codigo = event.which || event.keyCode;
-  if (String.fromCharCode(codigo) == "P") {
+  var activeElement = document.activeElement;
+  var isInput = activeElement.tagName === "INPUT";
+
+  if (!isInput && String.fromCharCode(codigo) === "P") {
     document.getElementById("pista").click();
-    contPistas++;
-    console.log(contPistas);
   }
 });
 
@@ -70,7 +69,6 @@ document.addEventListener("DOMContentLoaded", function () {
   var btnEnviar = document.getElementById("btnEnviar");
 
   boton.addEventListener("click", function () {
-    console.log("hola");
     btnEnviar.click();
   });
 });
