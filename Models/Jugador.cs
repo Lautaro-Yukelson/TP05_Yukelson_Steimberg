@@ -1,12 +1,14 @@
-public class Jugador
-{
-    public string Nombre { get; private set; }
-    public TimeSpan Tiempo { get; private set; }
-    public int Errores { get; private set; }
+public class Jugador{
+    public int idJugador { get; set; }
+    public string nombre { get; set; }
+    public int errores { get; set; }
+    public TimeSpan tiempo { get; set; }
 
-    public Jugador(string nombre, TimeSpan tiempo, int errores){
-        Nombre = nombre;
-        Tiempo = tiempo;
-        Errores = errores;
+    public Jugador(){}
+
+    public Jugador(string n, int e, TimeSpan t){
+        nombre = n;
+        errores = e;
+        tiempo = t;
     }
 }

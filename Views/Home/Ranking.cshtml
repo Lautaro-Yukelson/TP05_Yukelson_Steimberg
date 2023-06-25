@@ -5,7 +5,7 @@
 <div class="creditos">
     <div class="text-center">
         <h1 class="display-4">Ranking</h1>
-        <p>A continuacion, las personas que mas rapido y con menos errores resolvieron la sala</p>
+        <p>A continuacion, las personas que más rápido y con menos errores resolvieron la sala</p>
 
         <h2>TOP</h2>
         <ul class="list-group">
@@ -14,21 +14,21 @@
                     if (i == 0){
                         <li id="@Html.Raw(i)" class="creditos__item list-group-item active">
                             <p class="cat-ranking">Nombre:</p>
-                            <p class="cat-ranking">@ViewBag.Jugadores[i].Nombre</p>
+                            <p class="cat-ranking">@ViewBag.Jugadores[i].nombre</p>
                             <p class="cat-ranking">Tiempo:</p>
-                            <p class="cat-ranking">@string.Format("{0}:{1:D2}", (int)ViewBag.Jugadores[i].Tiempo.TotalMinutes, (int)ViewBag.Jugadores[i].Tiempo.TotalSeconds % 60)</p>
+                            <p class="cat-ranking">@string.Format("{0}:{1:D2}", (int)ViewBag.Jugadores[i].tiempo.TotalMinutes, (int)ViewBag.Jugadores[i].tiempo.TotalSeconds % 60)</p>
                             <p class="cat-ranking">Errores:</p>
-                            <p class="cat-ranking">@ViewBag.Jugadores[i].Errores</p>
+                            <p class="cat-ranking">@ViewBag.Jugadores[i].errores</p>
                         </li>
                     }
                     else{
                         <li id="@Html.Raw(i)" class="creditos__item list-group-item">
                             <p class="cat-ranking">Nombre:</p>
-                            <p class="cat-ranking">@ViewBag.Jugadores[i].Nombre</p>
+                            <p class="cat-ranking">@ViewBag.Jugadores[i].nombre</p>
                             <p class="cat-ranking">Tiempo:</p>
-                            <p class="cat-ranking">@string.Format("{0}:{1:D2}", (int)ViewBag.Jugadores[i].Tiempo.TotalMinutes, (int)ViewBag.Jugadores[i].Tiempo.TotalSeconds % 60)</p>
+                            <p class="cat-ranking">@string.Format("{0}:{1:D2}", (int)ViewBag.Jugadores[i].tiempo.TotalMinutes, (int)ViewBag.Jugadores[i].tiempo.TotalSeconds % 60)</p>
                             <p class="cat-ranking">Errores:</p>
-                            <p class="cat-ranking">@ViewBag.Jugadores[i].Errores</p>
+                            <p class="cat-ranking">@ViewBag.Jugadores[i].errores</p>
                         </li>
                     }
                 }

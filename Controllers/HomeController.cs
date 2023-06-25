@@ -52,13 +52,13 @@ public class HomeController : Controller
 
     [HttpPost]
     public IActionResult GuardarResultado(string nombre, TimeSpan tiempo, int errores){
-        Escape.AgregarJugador(new Jugador(nombre, tiempo, errores));
+        BD.AgregarJugador(new Jugador(nombre, errores, tiempo));
         return RedirectToAction("Ranking", "Home");
     }
 
     public IActionResult Ranking(){
-        Escape.OrdenarJugadores();
-        ViewBag.Jugadores = Escape.GetJugadores();
+        BD.LevantarJugadores();
+        ViewBag.Jugadores = BD.GetListadoJugadores();
         return View();
     }
 
