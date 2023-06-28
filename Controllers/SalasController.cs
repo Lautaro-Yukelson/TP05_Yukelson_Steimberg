@@ -8,6 +8,7 @@ public class SalasController : Controller
 {
     public IActionResult Sala(){
         ViewBag.sala = Escape.GetEstadoJuego();
+        ViewBag.sesion = Escape.GetSesion();
         if (ViewBag.sala != 10){
             if (Escape.GetPrimeraVez()){
                 ViewBag.resultado = 2; 

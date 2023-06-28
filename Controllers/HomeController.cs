@@ -18,6 +18,7 @@ public class HomeController : Controller
     }
 
     public IActionResult Tutorial(){
+        ViewBag.sesion = Escape.GetSesion();
         return View();
     }
 
@@ -41,6 +42,7 @@ public class HomeController : Controller
     }
 
     public IActionResult Creditos(){
+        ViewBag.sesion = Escape.GetSesion();
         if (Escape.GetEstadoJuego() != 10){
             return RedirectToAction("Continuar", "Home");
         }
