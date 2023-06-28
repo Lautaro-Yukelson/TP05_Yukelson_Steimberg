@@ -1,0 +1,56 @@
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="text-center login">
+    <div class="login-box">
+        <h2>Login</h2>
+        <form action="CheckLogin" method="post">
+            <div class="user-box">
+                <input type="text" name="usuario" autocomplete="off" required>
+                <label>Usuario</label>
+            </div>
+            <div class="user-box">
+                <input type="password" name="contrasena" autocomplete="off" required>
+                <label>Contraseña</label>
+            </div>
+
+            <button type="submit">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Login
+            </button>
+        </form>
+    </div>
+</div>
+
+<script>
+    const form = document.querySelector('form');
+    form.setAttribute('autocomplete', 'off');
+
+    if (@ViewBag.sesion == 0){
+        Swal.fire({
+            title: 'Usuario no encontrado',
+            icon: 'question',
+            confirmButtonText: 'Reintentar'
+        });
+    } else if (@ViewBag.sesion == 1){
+        Swal.fire({
+            title: 'Contraseña incorrecta',
+            icon: 'error',
+            confirmButtonText: 'Reintentar'
+        });
+    }
+
+    $(document).ready(function() {
+        $('.user-box input').on('focusout', function() {
+        if ($(this).val().trim() !== '') {
+        $(this).parent().addClass('active');
+        } else {
+        $(this).parent().removeClass('active');
+        }
+    });
+    });
+</script>

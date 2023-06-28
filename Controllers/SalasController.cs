@@ -9,9 +9,9 @@ public class SalasController : Controller
     public IActionResult Sala(){
         ViewBag.sala = Escape.GetEstadoJuego();
         if (ViewBag.sala != 10){
-            if (Escape.primeraVez){
+            if (Escape.GetPrimeraVez()){
                 ViewBag.resultado = 2; 
-            } else if (Escape.resuelto){
+            } else if (Escape.GetResuelto()){
                 ViewBag.resultado = 1;
             } else {
                 ViewBag.resultado = 0;

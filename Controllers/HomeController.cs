@@ -13,6 +13,7 @@ public class HomeController : Controller
     }
 
     public IActionResult Index(){
+        ViewBag.sesion = Escape.GetSesion();
         return View();
     }
 
@@ -23,18 +24,18 @@ public class HomeController : Controller
     public IActionResult Comenzar(){
         ViewBag.sala = Escape.GetEstadoJuego();
         Escape.ResetearJuego();
-        Escape.primeraVez = true;
+        Escape.SetPrimeraVez(true);
         return View();
     }
 
     public IActionResult Continuar(){
-        Escape.primeraVez = true;
+        Escape.SetPrimeraVez(true);
         return View();
     }
 
     [HttpPost]
     public IActionResult Habitacion(int sala, string clave){
-        Escape.resuelto = Escape.ResolverSala(sala, clave);
+        Escape.SetResuelto(Escape.ResolverSala(sala, clave));
         ViewBag.siguienteSala = Escape.GetEstadoJuego();
         return RedirectToAction("Sala", "Salas");
     }
@@ -59,13 +60,41 @@ public class HomeController : Controller
     public IActionResult Ranking(){
         BD.LevantarJugadores();
         ViewBag.Jugadores = BD.GetListadoJugadores();
+        ViewBag.sesion = Escape.GetSesion();
         return View();
+    }
+
+    [HttpPost]
+    public IActionResult EliminarJugador(int idE){
+        BD.EliminarJugador(idE);
+        return RedirectToAction("Ranking", "Home");
     }
 
     [HttpPost]
     public IActionResult VolverAEmpezar(){
         Escape.ResetearJuego();
         return RedirectToAction("Comenzar", "Home");
+    }
+
+    public IActionResult Login(){
+        int sesion = Escape.GetSesion();
+        ViewBag.sesion = sesion;
+        if (sesion == 0 || sesion == 1){
+            return View();
+        } else if (sesion == 2 || sesion == 3){
+            return RedirectToAction("Index", "Home");
+        }
+        return View();
+    }
+
+    public IActionResult Logout(){
+        Escape.SetSesion(-1);
+        return RedirectToAction("Index", "Home");
+    }
+
+    public IActionResult CheckLogin(string usuario, string contrasena){
+        Escape.SetSesion(Escape.CheckUsuario(usuario, contrasena));
+        return RedirectToAction("Login", "Home");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

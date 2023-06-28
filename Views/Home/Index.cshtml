@@ -13,3 +13,22 @@
         <div class="boton" ><a href="~/Home/Comenzar"><span>Comienza la aventura!</span></a></div>
     </div>
 </div>
+
+
+<script>
+    if (@ViewBag.sesion == 2){
+        Swal.fire({
+            title: 'Perfecto!',
+            text: "Te has logeado exitosamente",
+            icon: 'success',
+            confirmButtonText: 'Continuar'
+        });
+    } else if (@ViewBag.sesion == 3){
+        Swal.fire({
+            title: 'Adm',
+            text: 'Ahora estas logeado como admin',
+            icon: 'success',
+            confirmButtonText: 'Reintentar'
+        });
+    }
+</script>

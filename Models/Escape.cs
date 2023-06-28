@@ -1,11 +1,15 @@
+using TP05_Yukelson_Steimberg;
+
+
 public static class Escape
 {
     public static List<string> incognitasSalas { get; set; } = new List<string>{};
     private static int estadoJuego { get; set; } = 0;
     private static int cantErrores { get; set;} = 0;
+    private static int sesion {get; set;} = -1;
     private static bool yaTermino { get; set;} = false;
-    public static bool primeraVez { get; set;}
-    public static bool resuelto { get; set; }
+    private static bool primeraVez { get; set;}
+    private static bool resuelto { get; set; }
     private static TimeOnly horaInicio { get; set; }
     private static TimeSpan tiempoTranscurrido { get; set;}
 
@@ -28,6 +32,30 @@ public static class Escape
         return estadoJuego;
     }
 
+    public static int GetSesion(){
+        return sesion;
+    }
+
+    public static void SetSesion(int s){
+        sesion = s;
+    }
+
+    public static bool GetPrimeraVez(){
+        return primeraVez;
+    }
+
+    public static void SetPrimeraVez(bool p){
+        primeraVez = p;
+    }
+
+    public static void SetResuelto(bool r){
+        resuelto = r;
+    }
+
+    public static bool GetResuelto(){
+        return resuelto;
+    }
+
     public static void ResetearJuego(){
         estadoJuego = 1;
         yaTermino = false;
@@ -36,6 +64,24 @@ public static class Escape
 
     public static int GetErrores(){
         return cantErrores;
+    }
+
+    public static int CheckUsuario(string user, string contrasena){
+        BD.LevantarUsuarios();
+        Dictionary<string, Usuario> users = BD.GetDiccionarioUsuarios();
+        if (users.ContainsKey(user)){
+            if (users[user].contrasena == contrasena){
+                if (users[user].admin){
+                    return 3;
+                } else {
+                    return 2;
+                }
+            } else{
+                return 1;
+            }
+        } else{
+            return 0;
+        }
     }
 
     public static bool ResolverSala(int sala, string incognita){
