@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="~/TP05_Yukelson_Steimberg.styles.css" asp-append-version="true" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
 </head>
 <body>
     <header>
@@ -64,6 +66,42 @@
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
+    </div>
+
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-pausa" id="pausa" hidden></button>        
+    <div class="modal fade" id="modal-pausa" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">Menu</h5>
+                </div>
+                <div class="modal-body">
+                    <ul class="navbar-nav flex-grow-1 menu__link">
+                        <li class="nav-item menu__item list-group-item active">
+                            <a class="nav-link cat-ranking" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
+                        </li>
+                        <li class="nav-item menu__item list-group-item">
+                            <a class="nav-link cat-ranking" asp-area="" asp-controller="Home" asp-action="Tutorial">Tutorial</a>
+                        </li>
+                        <li class="nav-item menu__item list-group-item">
+                            <a class="nav-link cat-ranking" asp-area="" asp-controller="Home" asp-action="Comenzar">Comenzar</a>
+                        </li>
+                        <li class="nav-item menu__item list-group-item">
+                            <a class="nav-link cat-ranking" asp-area="" asp-controller="Home" asp-action="Continuar">Continuar</a>
+                        </li>
+                        <li class="nav-item menu__item list-group-item">
+                            <a class="nav-link cat-ranking" asp-area="" asp-controller="Home" asp-action="Creditos">Creditos</a>
+                        </li>
+                        <li class="nav-item menu__item list-group-item">
+                            <a class="nav-link cat-ranking" asp-area="" asp-controller="Home" asp-action="Ranking">Ranking</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <footer class="border-top footer text-muted">

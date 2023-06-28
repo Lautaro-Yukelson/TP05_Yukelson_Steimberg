@@ -1,54 +1,82 @@
-﻿document.addEventListener("keydown", (event) => {
-  var codigo = event.which || event.keyCode;
-  var activeElement = document.activeElement;
-  var isInput = activeElement.tagName === "INPUT";
-
-  if (!isInput && String.fromCharCode(codigo) === "P") {
-    document.getElementById("pista").click();
-  }
-});
+﻿var pulsado = false;
 
 document.addEventListener("DOMContentLoaded", function () {
-  var items = document.querySelectorAll(".creditos__item");
-  var currentItemIndex = 0;
-
   // Agregar la clase "active" al elemento actual
   function setActiveItem() {
-    for (var i = 0; i < items.length; i++) {
-      items[i].classList.remove("active");
+    if (pulsado){
+      for (let i = 0; i < itemsMenu.length; i++) {
+        itemsMenu[i].classList.remove("active");
+      }
+    } else {
+      for (let i = 0; i < items.length; i++) {
+        items[i].classList.remove("active");
+      }
     }
-    items[currentItemIndex].classList.add("active");
+    if (pulsado) {
+      itemsMenu[currentItemIndex].classList.add("active");
+    } else {
+      items[currentItemIndex].classList.add("active");
+    }
   }
 
+  // Pido los items
+  let items = document.querySelectorAll(".creditos__item");
+  let itemsMenu = document.querySelectorAll(".menu__item");
+  let currentItemIndex = 0;
+
   // Manejar el evento de presionar una tecla
-  document.addEventListener("keydown", function (event) {
-    switch (event.key) {
-      case "ArrowUp":
-        console.log("arriba")
-        if (currentItemIndex > 0) {
-          currentItemIndex--;
-        }
-        break;
-      case "ArrowDown":
-        if (currentItemIndex < items.length - 1) {
-          currentItemIndex++;
-        }
-        break;
+  document.addEventListener("keydown", (event) => {
+    let codigo = event.which || event.keyCode;
+    let activeElement = document.activeElement;
+    let isInput = activeElement.tagName === "INPUT";
+
+    console.log(event.key);
+
+    if (!isInput) {
+      switch (event.key.toUpperCase()) {
+        case "ESCAPE":
+          pulsado = !pulsado;
+          document.getElementById("pausa").click();
+          break;
+        case "P":
+          document.getElementById("pista").click();
+          break;
+        case "ARROWUP":
+          if (currentItemIndex > 0) {
+            currentItemIndex--;
+          }
+          setActiveItem();
+          break;
+        case "ARROWDOWN":
+          if (pulsado && currentItemIndex < itemsMenu.length - 1) {
+            currentItemIndex++;
+          } else if (!pulsado && currentItemIndex < items.length - 1) {
+            currentItemIndex++;
+          }
+          setActiveItem();
+          break;
+      }
     }
-    setActiveItem();
   });
 
   // Agregar el evento a todos los elementos
-  for (var i = 0; i < items.length; i++) {
+  for (let i = 0; i < items.length; i++) {
     items[i].addEventListener("click", function () {
       currentItemIndex = Array.from(items).indexOf(this);
       setActiveItem();
     });
   }
+
+  // Enviar form con boton fachero
+  let boton = document.querySelector(".submit");
+  let btnEnviar = document.getElementById("btnEnviar");
+
+  boton.addEventListener("click", function () {
+    btnEnviar.click();
+  });
 });
 
-let selectedHour = 0;
-
+var selectedHour = 0;
 function setTime(timeType, value) {
   if (timeType == "hour") {
     selectedHour = value;
@@ -64,12 +92,3 @@ function setTime(timeType, value) {
     document.getElementById("send").click();
   }
 }
-
-document.addEventListener("DOMContentLoaded", function () {
-  var boton = document.querySelector(".submit");
-  var btnEnviar = document.getElementById("btnEnviar");
-
-  boton.addEventListener("click", function () {
-    btnEnviar.click();
-  });
-});

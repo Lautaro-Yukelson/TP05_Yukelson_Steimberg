@@ -67,10 +67,11 @@ a:hover {
 .nav-link {
   font-size: 17px;
   color: white;
+  transition: none;
 }
 
 .nav-link:hover {
-  color: #f54d0b;
+  color: inherit;
 }
 
 .tutorial {
@@ -107,12 +108,12 @@ a:hover {
 }
 
 .list-group-item.active {
-  border: 1px solid rgb(231, 231, 231);
+  border: inherit;
   background-color: rgb(231, 231, 231);
   color: rgb(22, 21, 21);
 }
 
-.list-group-item.active p {
+.list-group-item.active p, .list-group-item.active a {
   color: rgb(22, 21, 21);
 }
 
@@ -262,7 +263,7 @@ a:hover {
 }
 
 .cat-ranking{
-  width: 16%;
+  width: 100%;
 
 }
 
@@ -792,5 +793,13 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm{
 }
 
 
+/*********************************************Menu Pausa*********************************************/
 
-
+.menu__link li{
+  padding-top: 7.5px;
+  padding-bottom: 7.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
