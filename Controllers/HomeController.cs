@@ -87,14 +87,24 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Logout(){
-        Escape.SetSesion(-1);
+    public IActionResult Register(){
+        ViewBag.sesion = Escape.GetSesion();
+        return View();
+    }
+
+    public IActionResult CheckLogin(string user, string psw){
+        Escape.SetSesion(Escape.CheckUsuario(user, psw));
+        return RedirectToAction("Login", "Home");
+    }
+
+    public IActionResult CheckRegister(string usuario, string contrasena){
+        BD.AgregarUsuario(usuario, contrasena);
         return RedirectToAction("Index", "Home");
     }
 
-    public IActionResult CheckLogin(string usuario, string contrasena){
-        Escape.SetSesion(Escape.CheckUsuario(usuario, contrasena));
-        return RedirectToAction("Login", "Home");
+    public IActionResult Logout(){
+        Escape.SetSesion(-1);
+        return RedirectToAction("Index", "Home");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

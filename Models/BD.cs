@@ -49,6 +49,16 @@ namespace TP05_Yukelson_Steimberg
             return _ListadoUsuarios;
         }
 
+        public static void AgregarUsuario(string user, string psw)
+        {
+            string sql = "INSERT INTO Usuarios(admin, usuario, contrasena) VALUES (@pAdmin, @pUsuario, @pContrasena)";
+            using(SqlConnection db = new SqlConnection(_connectionString))
+            {
+                db.Execute(sql, new { @pAdmin = 0, pUsuario = user, pContrasena = psw});
+            }
+            Escape.SetSesion(2);
+        }
+
         public static void AgregarJugador(Jugador Jug)
         {
             string sql = "INSERT INTO Jugadores(nombre, errores, tiempo) VALUES (@pNombre, @pErrores, @pTiempo)";
