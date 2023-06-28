@@ -10,16 +10,13 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   var items = document.querySelectorAll(".creditos__item");
-  var trashs = document.querySelectorAll(".trash__item");
   var currentItemIndex = 0;
 
   // Agregar la clase "active" al elemento actual
   function setActiveItem() {
     for (var i = 0; i < items.length; i++) {
-      trashs[i].classList.remove("t-active");
       items[i].classList.remove("active");
     }
-    trashs[currentItemIndex].classList.add("t-active");
     items[currentItemIndex].classList.add("active");
   }
 
@@ -27,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener("keydown", function (event) {
     switch (event.key) {
       case "ArrowUp":
+        console.log("arriba")
         if (currentItemIndex > 0) {
           currentItemIndex--;
         }
